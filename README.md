@@ -8,15 +8,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project requires Node.js and npm to be installed.
 
+## Installation
+
+`npm install` will install all required components.
+
 ## Available Scripts
 
 In the project directory, you can run:
-### `npm run deploy`
-
-This will deploy the app to GitHub Pages. It will be available at [https://nathanwall.github.io](https://nathanwall.github.io).
-
-This has limited functionality and is not recommended for use. It is only available for demonstration purposes. On github it does not show a flashing cursor or download the CV.
-
 
 ### `npm start`
 
