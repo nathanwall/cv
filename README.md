@@ -10,7 +10,9 @@ This project requires Node.js and npm to be installed.
 
 ## Installation
 
-`npm install` will install all required components.
+1. Clone this project
+2. `cd` into project folder
+3. `npm install` to install all required components
 
 ## Available Scripts
 
