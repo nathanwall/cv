@@ -1,6 +1,6 @@
 # My CV
 
-This is a React app that displays my CV in a pretend terminal. It utilises the `react-terminal-ui` component which can be found [here](https://github.com/jonmbake/react-terminal-ui) It is a work in progress.
+This is a React app that displays my CV in a pretend terminal. It utilises the `react-terminal-ui` component which can be found [here](https://github.com/jonmbake/react-terminal-ui). This project is a work in progress.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -8,15 +8,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project requires Node.js and npm to be installed.
 
+## Installation
+
+1. Clone this project
+2. `cd` into project folder
+3. `npm install` to install all required components
+
 ## Available Scripts
 
 In the project directory, you can run:
-### `npm run deploy`
-
-This will deploy the app to GitHub Pages. It will be available at [https://nathanwall.github.io](https://nathanwall.github.io).
-
-This has limited functionality and is not recommended for use. It is only available for demonstration purposes. On github it does not show a flashing cursor or download the CV.
-
 
 ### `npm start`
 
@@ -50,33 +50,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
