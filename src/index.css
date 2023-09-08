@@ -1,3 +1,9 @@
 body {
   padding-top: 1rem;
 }
+
+@media screen and (max-width: 1199px) {
+  div.react-terminal-wrapper {
+    font-size: 1.3vw;
+  }
+}

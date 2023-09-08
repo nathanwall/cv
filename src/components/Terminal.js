@@ -3,35 +3,46 @@ import Terminal, { ColorMode, TerminalInput, TerminalOutput, } from 'react-termi
 import { welcome, help, cv, links } from './Constants';
 
 const TerminalController = (props = {}) => {
-    const [colorMode, setColorMode] = useState(ColorMode.Dark);
-    const [lineData, setLineData] = useState([
-      <TerminalOutput>{welcome}&#128075;</TerminalOutput>,
-      <TerminalOutput>Type 'help' to begin</TerminalOutput>,
-			<TerminalOutput>Hint: Try using the &#128994; button if the CV is too long! </TerminalOutput>,
-    ]);
-		const [terminalHeight, setTerminalHeight] = useState("600px");
+    // Build Welcome message
+    let welcomeMessage = welcome.concat(help);
+    let welcomeMessageLineData = [];
+    for (let line = 0; line < welcomeMessage.length; line++) {
+      welcomeMessageLineData.push(<TerminalOutput>{welcomeMessage[line]}</TerminalOutput>);
+    }
 
+    // set welcome message as initial state
+    const [lineData, setLineData] = useState(welcomeMessageLineData);
+
+    // set color mode dark as initial state
+    const [colorMode, setColorMode] = useState(ColorMode.Dark);
+
+    // set terminal height to 600px as initial state
+		const [terminalHeight, setTerminalHeight] = useState("60vh");
+
+    // toggle color mode
     function toggleColorMode (e) {
       e.preventDefault();
       setColorMode(colorMode === ColorMode.Light ? ColorMode.Dark : ColorMode.Light);
     }
 
+    // toggle terminal height between 60vh and 80vh
 		function toggleTerminalHeight() {
-			setTerminalHeight(terminalHeight === "600px" ? "2800px" : "600px");
+      // if we're at 60 (restored) or 0 (minimised) view height, set to 80 (maximised)
+			setTerminalHeight((terminalHeight === "60vh")||(terminalHeight === "0px") ? "80vh" : "60vh");
 		}
-  
+
+    // handle input
     function onInput (input) {
       let ld = [...lineData];
       ld.push(<TerminalInput>{input}</TerminalInput>);
 
+      // dummy commands
       if (input.toLocaleLowerCase().trim() === 'cv') {
 				ld = [];
 				setLineData(ld);
 				for (let line = 0; line < cv.length; line++) {
 					ld.push(<TerminalOutput>{cv[line]}</TerminalOutput>);
 				}
-			//} else if (input.toLocaleLowerCase().trim() === 'cv --pdf') {
-				// TODO: Download the CV as a PDF
 			} else if (input.toLocaleLowerCase().trim() === 'cv --download') {
 				const element = document.createElement("a");
 				const file = new Blob([cv.join('\n')], {type: 'text/plain'});
@@ -54,22 +65,31 @@ const TerminalController = (props = {}) => {
       } else if (input) {
         ld.push(<TerminalOutput>Unrecognized command</TerminalOutput>);
       }
+
+      // set line data
       setLineData(ld);
     }
-  
+    
+    // Red button click
     const redBtnClick = () => {
-      console.log("Clicked the red button.");
+      window.location.href = "https://www.linkedin.com/in/nathan-wall-68022981";
     }
-  
+    // Yellow button click
     const yellowBtnClick = () => {
-      console.log("Clicked the yellow button.");
-			setTerminalHeight("0px");
+			setTerminalHeight("0px")
+      document.getElementById('terminal-container').className = 'container';
 
     }
-  
+    // Green button click
     const greenBtnClick = () => {
-      console.log("Clicked the green button.");
+      // toggle terminal height
 			toggleTerminalHeight();
+      // toggle container width
+      if (document.getElementById('terminal-container').className === 'container-fluid') {
+        document.getElementById('terminal-container').className = 'container';
+      } else {
+        document.getElementById('terminal-container').className = 'container-fluid';
+      }
     }
   
     const btnClasses = ['btn'];
@@ -79,7 +99,7 @@ const TerminalController = (props = {}) => {
       btnClasses.push('btn-light');
     }
     return (
-      <div className="container" >
+      <div className="container" id='terminal-container' >
         <div className="d-flex flex-row-reverse p-2">
           <button className={ btnClasses.join(' ') } onClick={ toggleColorMode } >Enable { colorMode === ColorMode.Light ? 'Dark' : 'Light' } Mode</button>
         </div>
