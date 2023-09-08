@@ -1,6 +1,6 @@
-# My CV
+# nathanwall.co.uk
 
-This is a React app that displays my CV in a pretend terminal. It utilises the `react-terminal-ui` component which can be found [here](https://github.com/jonmbake/react-terminal-ui). This project is a work in progress.
+This is a React app for my website that displays a pretend terminal. It utilises the `react-terminal-ui` component which can be found [here](https://github.com/jonmbake/react-terminal-ui). This project is a work in progress.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
