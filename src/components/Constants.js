@@ -72,7 +72,7 @@ export const cv = [
     "    and scalable",
     "  - Creation and deployment of software using GitLab CI/CD pipelines",
     "  - Working with the DevOps team to deploy and maintain software in Kubernetes",
-    "  - Creating tests for automated testing using Pytest",
+    "  - Creation of tests for automated testing using Pytest",
     "",
     "Role: Software Engineer",
     "Where: SSP Limited",
@@ -129,7 +129,7 @@ export const cv = [
 export const links = [
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/nathan-wall-68022981",
+        url: "www.linkedin.com/in/nathan-w-68022981",
     },
     {
         name: "GitHub",
