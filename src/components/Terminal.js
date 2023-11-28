@@ -89,7 +89,7 @@ const TerminalController = (props = {}) => {
 
   // Red button click
   const redBtnClick = () => {
-    window.location.href = "www.linkedin.com/in/nathan-w-68022981";
+    window.location.href = "https://www.linkedin.com/in/nathan-w-68022981";
   };
   // Yellow button click
   const yellowBtnClick = () => {
