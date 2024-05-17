@@ -4,7 +4,7 @@ import Terminal, {
   TerminalInput,
   TerminalOutput,
 } from "react-terminal-ui";
-import { welcome, help, cv, links } from "./Constants";
+import { welcome, help, cv, links, certs } from "./Constants";
 
 const TerminalController = (props = {}) => {
   // Build Welcome message
@@ -67,6 +67,16 @@ const TerminalController = (props = {}) => {
             {link.name}:{" "}
             <a href={link.url} target="_blank">
               {link.url}
+            </a>
+          </TerminalOutput>
+        );
+      });
+    } else if (input.toLocaleLowerCase().trim() === "certs") {
+      certs.forEach(function (cert, index) {
+        ld.push(
+          <TerminalOutput>
+            <a href={cert.url} target="_blank">
+              {cert.name}
             </a>
           </TerminalOutput>
         );

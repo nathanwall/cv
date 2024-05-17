@@ -17,6 +17,7 @@ export const help = [
   "'cv' - Print my CV to this terminal",
   "'cv --download' - Download my CV in text format",
   "'links' - Get a list of my links",
+  "'certs' - Get a list of my certifications",
   "'help' - Print this list of commands",
   "'clear' - Clear the terminal",
 ];
@@ -34,7 +35,7 @@ export const cv = [
   "Skills",
   "------------------------------",
   "  Languages:-",
-  "    Python, Javascript, Perl, Shell/BASH script, SQL, JSON, XML, YAML",
+  "    Python, Javascript, Perl, Shell/BASH script, SQL, JSON, XML, YAML, GraphQL",
   "  Databases:-",
   "    MongoDB, IBM Informix Dynamic Server, MySQL, PostgreSQL, DataBricks",
   "  Utilities:-",
@@ -130,13 +131,33 @@ export const cv = [
   "References available on request",
   "------------------------------",
 ];
+
 export const links = [
   {
     name: "LinkedIn",
-    url: "www.linkedin.com/in/nathan-w-68022981",
+    url: "https://www.linkedin.com/in/nathan-w-68022981",
   },
   {
     name: "GitHub",
     url: "https://github.com/nathanwall",
+  },
+];
+
+export const certs = [
+  {
+    name: "Apollo (GraphQL): Graph Developer - Associate",
+    url: "https://www.apollographql.com/tutorials/certifications/4e880ce8-b7bb-442f-9a8d-c5b48c351ef1",
+  },
+  {
+    name: "Microsoft: Introduction to Python: Unit 1",
+    url: "https://courses.edx.org/certificates/a7962e3c9694458f9849cf018e5fdbe1",
+  },
+  {
+    name: "Microsoft: Introduction to Python: Fundamentals",
+    url: "https://courses.edx.org/certificates/a4a34bd9acc84bce8ea637252399f096",
+  },
+  {
+    name: "Linux Foundation: Introduction to Linux",
+    url: "https://s3.amazonaws.com/verify.edx.org/downloads/fff3257f1e8545638d7b74e00c5d4d17/Certificate.pdf",
   },
 ];
